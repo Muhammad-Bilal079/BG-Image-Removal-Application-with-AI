@@ -7,6 +7,7 @@ import BuyCredits from './pages/BuyCredits'
 import Navbar from './compnents/Navbar'
 import Footer from './compnents/Footer'
 
+
 const App = () => {
   return (
     <div className='min-h-screen bg-slate-50'>
@@ -15,7 +16,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/result" element={<Result />} />
-        <Route path="/buy-credits" element={<BuyCredits />} />
+        <Route path="/buy-credit" element={<BuyCredits />} />
       </Routes>
 
       <Footer />
