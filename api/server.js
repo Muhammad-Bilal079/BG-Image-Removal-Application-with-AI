@@ -13,6 +13,7 @@ app.use(cors())
 app.use(express.json())
 await connectDB()
 
+
 // API routes 
 app.get('/', (req, res) => {
     res.send('Hello World!')
