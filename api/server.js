@@ -3,6 +3,7 @@ import express from 'express'
 import cors from 'cors'
 import { connect } from 'mongoose'
 import connectDB from './src/config/mongoDB.js'
+import userRoute from './src/routes/userRoute.js'
 
 // app config 
 const PORT = process.env.PORT || 4000
@@ -18,7 +19,7 @@ await connectDB()
 app.get('/', (req, res) => {
     res.send('Hello  brother!')
 })
-
+app.use('/api/user',userRoute)
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 })
