@@ -48,4 +48,20 @@ console.log(req.body , 'sdsds');
   }
 };
 
-export { clerkWebhooks };
+const userCredits = async (req, res) => {
+  try {
+    const { clerkId } = req.body;
+    const userData = await userModel.findOne({ clerkId  });
+    return res.json({ success: true, credits: userData.creditBalance });
+
+  } 
+  catch (error) {
+    console.error(error.message);
+    return res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+
+
+
+export { clerkWebhooks , userCredits};
