@@ -16,7 +16,7 @@ await connectDB()
 
 // API routes 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Hello  brother!')
 })
 
 app.listen(PORT, () => {
